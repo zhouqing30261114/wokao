@@ -1,0 +1,8 @@
+# 编译输出目录
+dist
+
+# npm模块安装目录
+node_modules
+
+# 
+npm-debug.log

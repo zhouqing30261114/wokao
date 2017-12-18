@@ -1,0 +1,60 @@
+{
+  "name": "wokao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.product.js",
+    "start": "webpack --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhouqing30261114/wokao.git"
+  },
+  "author": "zhouqing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhouqing30261114/wokao/issues"
+  },
+  "homepage": "https://github.com/zhouqing30261114/wokao#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "director": "^1.2.8",
+    "file-loader": "^1.1.5",
+    "gl-buffer": "^2.1.2",
+    "gl-geometry": "^3.1.1",
+    "gl-matrix": "^2.4.0",
+    "gl-shader": "^4.2.1",
+    "gl-texture2d": "^2.1.0",
+    "gl-vao": "^1.3.0",
+    "gl2-now": "^1.4.2",
+    "glsl-diffuse-lambert": "^1.0.0",
+    "glsl-inverse": "^1.0.0",
+    "glsl-transpose": "^1.0.0",
+    "glslify": "^6.1.0",
+    "glslify-loader": "^1.0.2",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "icosphere": "^1.0.0",
+    "lodash": "^4.17.4",
+    "normals": "^1.1.0",
+    "perspective-camera": "^2.0.1",
+    "primitive-torus": "^1.0.4",
+    "raw-loader": "^0.5.1",
+    "shader-loader": "^1.3.1",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
+  },
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^1.1.2"
+  }
+}
