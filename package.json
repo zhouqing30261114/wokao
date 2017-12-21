@@ -38,6 +38,7 @@
     "gl2-now": "^1.4.2",
     "glsl-diffuse-lambert": "^1.0.0",
     "glsl-inverse": "^1.0.0",
+    "glsl-specular-phong": "^1.0.0",
     "glsl-transpose": "^1.0.0",
     "glslify": "^6.1.0",
     "glslify-loader": "^1.0.2",

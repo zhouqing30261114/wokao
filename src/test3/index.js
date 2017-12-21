@@ -1,6 +1,6 @@
 import gl2Now from 'gl2-now';
 import createBuffer from 'gl-buffer';
-// import createVAO from 'gl-vao';
+import createVAO from 'gl-vao';
 import glslify from 'glslify'; // 赋予着色器模块化的能力
 import createShader from 'gl-shader';
 import createCamera from 'perspective-camera';
@@ -12,7 +12,7 @@ import vShaderSource from './shader.vs';
 import fShaderSource from './shader.fs';
 
 const startTime = new Date();
-let shader, geom, camera, pointShader, pointBuffer;
+let shader, geom, camera, pointShader, pointBuffer, vao;
 const sphereMesh = icosphere();
 
 export default () => {
@@ -61,6 +61,11 @@ export default () => {
 		});
 
 		pointBuffer = createBuffer(gl, lightPosition);
+		// vao = createVAO(gl, [{
+		// 	buffer: pointBuffer,
+		// 	type: gl.FLOAT,
+		// 	size: 1,
+		// }]);
 
 	});
 	shell.on('gl-render', () => {
@@ -92,9 +97,13 @@ export default () => {
 		pointShader.bind();
 		pointShader.uniforms.projection = camera.projection;
 		pointShader.uniforms.view = camera.view;
+
 		pointBuffer.bind();
 		pointShader.attributes.position.pointer(gl.FLOAT, false, 0, 0);
 		gl.drawArrays(gl.POINTS, 0, 1);
+		// vao.bind();
+		// vao.draw(gl.POINTS, 1);
+		// vao.unbind();
 
 	});
 	shell.on('gl-error', () => {
