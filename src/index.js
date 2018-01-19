@@ -1,3 +1,4 @@
+import "babel-polyfill"; // ES5垫片
 import { Router } from 'director/build/director.min.js';
 
 const routes = {

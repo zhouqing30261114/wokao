@@ -41,6 +41,14 @@ module.exports = {
 				],
 			},
 			{
+				test: /\.less$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					'less-loader',
+				],
+			},
+			{
 				test: /\.(jpg|png|gif|svg)$/,
 				use: [
 					'file-loader',
@@ -59,12 +67,18 @@ module.exports = {
 					'glslify-loader',
 				],
         // loader: 'shader-loader',
-      },
+			},
+			// {
+			// 	test: /\.html$/,
+			// 	use: [
+			// 		'html-loader',
+			// 	],
+      // },
 		]
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'test',
+			title: 'webGL test',
 		}),
 		new webpack.HashedModuleIdsPlugin(),
 		new webpack.optimize.CommonsChunkPlugin({
