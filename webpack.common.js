@@ -68,17 +68,17 @@ module.exports = {
 				],
         // loader: 'shader-loader',
 			},
-			// {
-			// 	test: /\.html$/,
-			// 	use: [
-			// 		'html-loader',
-			// 	],
-      // },
+			{
+				test: /\.ejs$/,
+				use: [
+					'ejs-loader?variable=data',
+				],
+      },
 		]
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'webGL test',
+			template: 'src/index.ejs',
 		}),
 		new webpack.HashedModuleIdsPlugin(),
 		new webpack.optimize.CommonsChunkPlugin({
@@ -86,6 +86,10 @@ module.exports = {
 		}),
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'runtime',
+		}),
+		// 使得ejs生效
+		new webpack.ProvidePlugin({
+			_: "underscore",
 		}),
 		new CleanWebpackPlugin(['dist']),
 	],
